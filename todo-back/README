@@ -1,0 +1,21 @@
+# ToDo Backend
+
+## Requirements
+ - Docker
+ - docker image postgres:16.1-alpine
+ - yarn
+
+## Deploy and run
+
+```bash
+make postrges
+make createdb
+make migrateup
+make dev
+```
+
+## If you have own postgres do below steps
+ - create database with `todo_db`
+ - update `config/config.json` file
+ - then migrate up `yarn sequelize db:migrate`
+ - finally we can start server `yarn nodemon server.js` in dev
